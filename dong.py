@@ -16,15 +16,11 @@ score=Scoreboard()
 
 r_paddle=Paddle((270,0))
 l_paddle=Paddle((-270,0))
-
-
 screen.listen()
-
 screen.onkey(r_paddle.go_up, "Up")
 screen.onkey(r_paddle.go_down, "Down")
 screen.onkey(l_paddle.go_up, "w")
 screen.onkey(l_paddle.go_down, "s")
-
 
 game_on=True
 
@@ -60,8 +56,4 @@ while game_on:
     score.end_game()
     if score.r_score==5 or score.l_score==5:
         game_on=False
-
-
-
-
 screen.exitonclick()
